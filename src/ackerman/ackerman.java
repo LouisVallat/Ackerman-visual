@@ -32,13 +32,21 @@ public class ackerman {
             int m = sc.nextInt();
             System.out.println("[?] Choose a n for A(m, n) : ");
             int n = sc.nextInt();
+            System.out.println("[?] Do you want the speed ? [true/false] ");
+            boolean p = sc.nextBoolean();
             //Calculate the start date
             SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss.SSS");
             Calendar startTime = Calendar.getInstance();
             System.out.println("\nAckerman-visual : launching at " + format.format(new Date()));
+            System.out.println("[Processing, please wait...]");
             //Executing and printing the result
-            System.out.println("|-----|-- Résults from the Ackerman function : A(" + m + "," + n + ") : "
-                    + ackerTrace(m, n, 0));
+            if (p) {
+                System.out.println("Résults from the Ackerman function : A(" + m + "," + n + ") : "
+                        + acker(m, n));
+            } else {
+                System.out.println("|-----|-- Résults from the Ackerman function : A(" + m + "," + n + ") : "
+                        + ackerTrace(m, n, 0));
+            }
             //Calculate the end date
             System.out.println("Ackerman-visual : end at " + format.format(new Date()));
             //Calculate the difference
@@ -49,7 +57,8 @@ public class ackerman {
             System.out.println("Completed in : " + formatMilli(diff));
         } catch (java.util.InputMismatchException e) {
             //Error catching
-            System.out.println("\nYou can enter integers only.\nBye!");
+            System.out.println("\nYou can enter integers only as m and n, "
+                    + "and true or false as answer.\nBye!");
         }
     }
 
