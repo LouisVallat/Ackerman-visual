@@ -15,7 +15,7 @@ import java.util.TimeZone;
  *
  * @author LouisVallat
  */
-public class ackerman {
+public class Ackerman {
 
     /**
      * Algo-prog exercise. Done better. Smarter. Faster. Javaier.
