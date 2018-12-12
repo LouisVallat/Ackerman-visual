@@ -20,7 +20,7 @@ public class AckermanTest {
         int m = 2;
         int n = 2;
         int expResult = 7;
-        int result = ackerman.acker(m, n);
+        int result = Ackerman.acker(m, n);
         assertEquals(expResult, result);
     }
     
